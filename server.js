@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
     res.render('index.html');
 });
 
-var port = 8080;
+var port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log('app running at port ', port);
 });
