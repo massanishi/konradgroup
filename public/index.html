@@ -1,27 +1,66 @@
 <html>
+
 <head>
-	<title>Conrad Group Mock</title>
-	<meta charset='UTF-8'>
+    <title>Conrad Group Mock</title>
+    <meta charset='UTF-8'>
     <meta name='description' content='This is a mock site for Konrad Group website. I do not own any rights for the contents.'>
     <meta name='language' content='ES'>
     <meta name='author' content='Masatoshi Nishimura'>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
-	<script src='vendor/angular.min.js'></script>
+    <script src='vendor/jquery-1.11.3.min.js' asynch></script>
+    <script src='vendor/bootstrap.min.js' asynch></script>
+    <script src='vendor/angular.min.js' asynch></script>
+    <script src='scripts/app.js' asynch></script>
 </head>
-<body>
-	<header>
-		<nav class="navbar navbar-fixed-top navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li><a>WORK</a></li>
-				<li><a>SERVICE</a></li>
-				<li><a>CORPORATE TRAINING</a></li>
-				<li><a>ABOUT</a></li>
-				<li><a>CAREERS</a></li>
-				<li><button>GET IN TOUCH</button></li>
-			</ul>
-		</nav>
-	</header>
-	<h1>hi</h1>
+
+<body ng-app='App'>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">KONRAD</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-content">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a>WORK</a></li>
+                        <li><a class="active">SERVICES</a></li>
+                        <li><a>CORPORATE TRAINING</a></li>
+                        <li><a>ABOUT</a></li>
+                        <li><a>CAREERS</a></li>
+                        <li>
+                            <a>
+                                <div class="contact">
+                                    GET IN TOUCH
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="hero" >
+        	<div class="overlay">
+        	</div>
+            <div class="container">
+                <div class="row">
+                    <h1>Services.</h1>
+                </div>
+            </div>
+        </div>
+        <article class="first-article" parallax-background parallax-ratio="0.94">
+        	hi
+        </article>
+    </div>
 </body>
+
 </html>

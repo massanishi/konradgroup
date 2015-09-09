@@ -1,0 +1,103 @@
+body {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 68px;
+}
+
+nav {
+    padding-top: 12px;
+}
+
+header .navbar-header {
+    padding-top: 15px;
+    padding-left: 8px;
+}
+
+header .navbar-header button {
+    margin-top: -2px;
+}
+
+header a.navbar-brand {
+    background: url('../img/logo.png');
+    overflow: hidden;
+    text-indent: 100%;
+    background-repeat: no-repeat;
+    width: 138px;
+    height: 23px;
+    background-size: contain;
+}
+
+header .navbar-nav a {
+    letter-spacing: 0.2em;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+header .navbar-nav {
+    padding-right: 5px;
+}
+
+header .navbar-nav a.active {
+    color: #ccc;
+}
+
+header .navbar-nav a:hover {
+    background: transparent;
+    cursor: pointer;
+    color: #ccc;
+}
+
+header .navbar-nav .contact {
+    color: #3399ff;
+    background-color: white;
+    padding: 9px 16px;
+    margin-top: -9px;
+}
+
+header .navbar-nav .contact a {
+    font-weight: 400;
+}
+
+header .icon-bar {
+    background-color: white;
+}
+
+.hero {
+    background: url('../img/hero_cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    position: relative;
+    height: 534px;
+    padding-top: 245px;
+    z-index: -2;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(30,30,30,0.2);
+    z-index: -1;
+}
+
+.hero h1 {
+    color: white;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+.first-article{
+	background: #ddd;
+	height: 480px;
+}
