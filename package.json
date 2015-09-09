@@ -1,0 +1,16 @@
+{
+  "name": "konrad",
+  "version": "1.0.0",
+  "description": "This is a mock site for Konrad Group website. It is solely for personal purpose.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "massanishi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+  }
+}
