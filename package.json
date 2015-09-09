@@ -3,14 +3,27 @@
   "version": "1.0.0",
   "description": "This is a mock site for Konrad Group website. It is solely for personal purpose.",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massanishi/konradgroup.git"
+  },
+  "keywords": [
+    "konrad",
+    "mocksite"
+  ],
   "author": "massanishi",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.13.3",
-    "express": "^4.13.3",
+  "bugs": {
+    "url": "https://github.com/massanishi/konradgroup/issues"
   },
+  "homepage": "https://github.com/massanishi/konradgroup#readme"
 }
