@@ -1,5 +1,5 @@
 angular.module('App', [])
-    .controller('MainController', function($scope, $timeout) {
+    .controller('MainController', function($scope, $timeout, $anchorScroll, $location) {
         var win = $(window);
         var overHeroPos = 522;
 
@@ -11,13 +11,18 @@ angular.module('App', [])
                 }, 10);
 
             } else {
-            	$timeout(function() {
+                $timeout(function() {
                     $scope.showNav = false;
                 }, 10);
             }
 
             console.log("You've scrolled " + win.scrollTop() + " pixels");
         });
+
+        $scope.scroll = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        };
     })
     .controller('ServiceController', function($scope) {
         $scope.services = [{
@@ -34,4 +39,3 @@ angular.module('App', [])
             contents: ['Brand Strategy', 'Identity Design', 'Customer Engagement Strategy', 'Marketing Automation', 'Media Production and Planning', 'Brochure & Collateral Production']
         }]
     })
-  

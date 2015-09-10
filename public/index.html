@@ -15,7 +15,7 @@
     <script src='scripts/app.js' asynch></script>
 </head>
 
-<body ng-app='App' ng-controller="MainController">
+<body ng-app='App' ng-controller="MainController" id='top'>
     <header>
         <ng-include src='"./views/navigation.html"' />
     </header>
@@ -65,7 +65,7 @@
         <div class="container-fluid">
             <div class="row align-center">
                 <div class=" back-to-top">
-                    <a href="#">BACK TO TOP</a>
+                    <a ng-click='scroll("top")'>BACK TO TOP</a>
                 </div>
                 <div class="footer-nav">
                     <ul>
