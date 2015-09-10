@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Conrad Group Mock</title>
+    <title>Konrad Group Mockup</title>
     <meta charset='UTF-8'>
     <meta name='description' content='This is a mock site for Konrad Group website. I do not own any rights for the contents.'>
     <meta name='language' content='ES'>
@@ -9,58 +9,85 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-
     <script src='vendor/jquery-1.11.3.min.js' asynch></script>
     <script src='vendor/bootstrap.min.js' asynch></script>
     <script src='vendor/angular.min.js' asynch></script>
     <script src='scripts/app.js' asynch></script>
 </head>
 
-<body ng-app='App'>
+<body ng-app='App' ng-controller="MainController">
     <header>
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">KONRAD</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-content">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a>WORK</a></li>
-                        <li><a class="active">SERVICES</a></li>
-                        <li><a>CORPORATE TRAINING</a></li>
-                        <li><a>ABOUT</a></li>
-                        <li><a>CAREERS</a></li>
-                        <li>
-                            <a>
-                                <div class="contact">
-                                    GET IN TOUCH
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <ng-include src='"./views/navigation.html"' />
     </header>
     <div class="content">
-        <div class="hero" >
-        	<div class="overlay">
-        	</div>
+        <div class="hero">
+            <div class="overlay">
+            </div>
             <div class="container">
                 <div class="row">
                     <h1>Services.</h1>
                 </div>
             </div>
         </div>
-        <article class="first-article" parallax-background parallax-ratio="0.94">
-        	hi
+        <article class="first-article services" ng-controller="ServiceController">
+            <div class="container-fluid">
+                <div class="service" ng-repeat='service in services'>
+                    <div class="row">
+                        <div class="title col-sm-4">
+                            <h3>{{service.title}}</h3>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4 ng-repeat='content in service.contents' ng-if='$index < 3'>{{content}}</h4>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4 ng-repeat='content in service.contents' ng-if='$index >= 3'>{{content}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="second-article clients">
+            <h2>SELECT CLIENTS</h2>
+            <div class="container-fluid">
+                <div class="client">
+                    <img src="img/static1.squarespace.png">
+                </div>
+                <div class="client">
+                    <img src="img/static1.squarespace-1.png">
+                </div>
+                <div class="client">
+                    <img src='img/static1.squarespace-2.png'>
+                </div>
+            </div>
         </article>
     </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row align-center">
+                <div class=" back-to-top">
+                    <a href="#">BACK TO TOP</a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Work</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Corporate Training</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">BrainStation</a></li>
+                        <li><a href="">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 copy-right">
+                    <span>&copy; Konrad Group.</span>
+                    <span>I don't own this content at all.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

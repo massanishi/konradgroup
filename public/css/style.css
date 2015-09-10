@@ -1,18 +1,57 @@
 body {
     font-size: 14px;
+    background: black;
 }
 
 h1 {
     font-size: 68px;
 }
 
-nav {
+h2,
+h3,
+h4 {
+    letter-spacing: 1px;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover,
+a:visited,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+.align-center {
+    text-align: center;
+}
+
+header nav.navbar {
     padding-top: 12px;
+    position: absolute;
+    width: 100%;
+    border-radius: 0;
+}
+
+.fixed-nav-appear {
+    position: fixed;
+    background: #3399ff;
 }
 
 header .navbar-header {
     padding-top: 15px;
     padding-left: 8px;
+}
+
+header nav.fixed-nav-appear {
+    position: fixed;
 }
 
 header .navbar-header button {
@@ -55,10 +94,7 @@ header .navbar-nav .contact {
     background-color: white;
     padding: 9px 16px;
     margin-top: -9px;
-}
-
-header .navbar-nav .contact a {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 header .icon-bar {
@@ -85,19 +121,99 @@ header .icon-bar {
     bottom: 0;
     left: 0;
     position: absolute;
-    background-color: rgba(30,30,30,0.2);
+    background-color: rgba(30, 30, 30, 0.2);
     z-index: -1;
 }
 
 .hero h1 {
-    color: white;
     color: white;
     font-weight: 100;
     letter-spacing: 6px;
     text-align: center;
 }
 
-.first-article{
-	background: #ddd;
-	height: 480px;
+article {
+    background: white;
+}
+
+.first-article {
+    background: #eee;
+    padding: 36px 0;
+}
+
+.first-article .service {
+    padding: 40px 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.first-article .service:last-child {
+    border-bottom: none;
+}
+
+.first-article .title h3 {
+    font-weight: 300;
+    padding-bottom: 24px;
+}
+
+.first-article .service h4 {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+}
+
+.second-article {
+    text-align: center;
+    padding-top: 32px;
+}
+
+.second-article h2 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.second-article .client {
+    border-bottom: 1px #ccc solid;
+    padding: 32px 0;
+}
+
+.second-article .client img {
+    width: 100%;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    font-weight: 100;
+}
+
+footer a {
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+footer .back-to-top {
+    padding-top: 54px;
+    padding-bottom: 72px;
+    width: 100%;
+}
+
+footer .footer-nav {
+    padding: 12px 0px;
+}
+
+footer .footer-nav ul {
+    padding-left: 0;
+}
+
+footer .footer-nav li a {
+    padding: 10px 15px;
+    color: #bbb;
+}
+
+footer .copy-right {
+    font-size: 10px;
+    color: #bbb;
+    padding-bottom: 43px;
+    letter-spacing: 1px;
 }
